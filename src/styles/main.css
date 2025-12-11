@@ -91,3 +91,73 @@ body {
   color: var(--text-muted);
 }
 
+/* --------------------------------- CATEGORIAS -------------------------------- */
+
+.categories {
+  padding: 32px 0;
+}
+
+.categories__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.categories__title {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.categories__list {
+  display: flex;
+  flex-wrap: wrap;       
+  gap: 16px;
+}
+
+.category-item {
+  background: var(--bg-dark);
+  padding: 12px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+
+  text-align: center;
+  width: calc(50% - 8px);
+}
+
+.category-item:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.category-item__img {
+  border-radius: var(--radius-md);
+  height: 120px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* --------------------------------- BOTÕES ----------------------------------------- */
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: #000;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  margin-top: 8px;
+  font-weight: bold;
+  transition: var(--transition);
+} 
+
+.button:hover {
+  background: var(--accent-light);
+}
+
+.button--primary {
+  background: var(--accent-light);
+}
+
+.button--small {
+  font-size: 0.85rem;
+}
+
