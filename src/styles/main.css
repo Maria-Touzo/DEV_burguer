@@ -237,3 +237,11 @@ body {
   color: var(--accent-light);
 }
 
+/* ----------------------------------- FOOTER ------------------------------ */
+
+.footer {
+  background: var(--bg-dark);
+  padding: 20px;
+  text-align: center;
+  color: var(--text-muted);
+}
