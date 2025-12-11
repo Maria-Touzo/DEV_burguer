@@ -1,0 +1,19 @@
+:root {
+  --bg: #0f172a;
+  --bg-dark: #0b1120;
+
+  --text: #ffffff;
+  --text-muted: #94a3b8;
+
+  --accent: #ff6b35;
+  --accent-light: #ffd166;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow: 0 6px 18px rgba(0,0,0,0.3);
+  --shadow-hover: 0 12px 28px rgba(0,0,0,0.4);
+
+  --transition: .25s ease;
+}

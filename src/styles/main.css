@@ -1,0 +1,67 @@
+/* Formatando o corpo do site */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* --------------------------- HEADER ------------------------ */
+
+/* Formatação do header */
+.header {
+  background: var(--bg-dark);
+  padding: 16px 0;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Formatação do container do header */
+.header__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Formatando a logo  */
+.header__logo {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.header__nav {
+  display: none;
+}
+
+/* Formatando o menu */
+.header__menu {
+  display: flex;
+  gap: 20px;
+}
+
+.header__link {
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.header__link:hover {
+  color: var(--accent);
+}
+
+.header__social {
+  display: none; 
+}
+
+.header__toggle span {
+  font-size: 32px;
+  color: var(--accent);
+}
+
