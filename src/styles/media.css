@@ -1,0 +1,64 @@
+
+/* para tablets */
+@media (min-width: 600px) {
+  .category-item {
+    width: calc(33.33% - 11px);
+  }
+}
+
+/* para desktops */
+@media (min-width: 900px) {
+  
+    /* menu completo (nav) no desktop */
+  .header__nav {
+    display: block;
+  }
+
+  /* ícones redes sociais apenas no desktop */
+  .header__social {
+    display: flex;
+    gap: 16px;
+  }
+
+  /* Oculta o botão de menu hamburgue */
+  .header__toggle {
+    display: none;
+  }
+
+  /* grid 3 colunas */
+  .products__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+   /* Banner maior em telas grandes  */
+  .banner {
+    height: 380px;
+  }
+
+  /* título mais destacado */
+  .banner__title {
+    font-size: 3.8rem;
+  }
+}
+
+@media(max-width: 400px){
+    .header{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .header__container, .header__menu{
+        flex-wrap: wrap;
+        flex-direction: column;
+    
+    }
+
+    .banner__title{
+      text-align: center;
+    }
+
+    .banner__subtitle{
+      padding: 10px;
+    }
+}
