@@ -65,3 +65,29 @@ body {
   color: var(--accent);
 }
 
+/* ----------------------------- BANNER ---------------------------------- */
+
+.banner {
+  height: 260px;
+  background: url('https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1200')
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner__title {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.banner__title--highlight {
+  color: var(--accent);
+}
+
+.banner__subtitle {
+  text-align: center;
+  margin-top: 8px;
+  color: var(--text-muted);
+}
+
