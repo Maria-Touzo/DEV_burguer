@@ -8,9 +8,18 @@ create table if not exists hamburgueres (codigo int  AUTO_INCREMENT PRIMARY KEY,
  destaque bool,
  foto varchar(100),
  disponibilidade bool);
+ 
+create table if not exists usuario (codigo int  AUTO_INCREMENT PRIMARY KEY,
+ nome_usuario varchar(20), 
+ senha varchar(200));
+ 
+
 
 ALTER TABLE hamburgueres 
 MODIFY COLUMN descricao VARCHAR(255);
+
+ALTER TABLE hamburgueres 
+MODIFY COLUMN foto VARCHAR(1000);
  
  INSERT INTO hamburgueres (produto, descricao, preco, destaque, foto, disponibilidade) VALUES
 ('Classic Burger', 'Pão, carne 160g, queijo e maionese.', 25.90, true, 'classic.jpg', true),
@@ -21,4 +30,6 @@ MODIFY COLUMN descricao VARCHAR(255);
 ('Smash Simples', 'Prensado na chapa com cebola e picles.', 18.00, false, 'smash.jpg', true),
 ('Hot Jalapeño', 'Carne, queijo e pimenta jalapeño.', 29.90, false, 'hot.jpg', false),
 ('Gourmet Trufado', 'Carne angus com maionese trufada.', 45.00, true, 'trufado.jpg', true);
+
+INSERT INTO usuario (usuario, senha) VALUES 
  
