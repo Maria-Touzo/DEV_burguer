@@ -27,7 +27,7 @@
               alt="{{destaque.nome}}"
               class="category-item__img"
             />
-            <a href="{{destaque.codigo}}" class="button button--small">EU QUERO</a>
+            <a href="/produto/{{destaque.codigo}}" class="button button--small">EU QUERO</a>
           </div>
         {% endfor %}
         </div>
@@ -56,7 +56,7 @@
               </p>
               <div class="card__footer">
                 <span class="card__price">R$ 25,00</span>
-                <button class="button button--small">Comprar</button>
+                <a href="/produto/{{produto.codigo}}"><button class="button button--small">Comprar</button></a>
               </div>
             </div>
           </article>
