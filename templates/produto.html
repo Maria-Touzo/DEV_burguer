@@ -11,17 +11,16 @@
 
       <!-- IMAGEM COM CARD -->
       <div class="image-card">
-        <img src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg" alt="Classic Dev">
+        <img src="{{produto.foto}}" alt="Classic Dev">
       </div>
 
       <!-- INFORMAÇÕES -->
       <div class="product__info">
-        <h2 class="product__title">Classic Dev</h2>
+        <h2 class="product__title">{{produto.produto}}</h2>
         <p class="product__description">
-          Pão brioche macio, carne suculenta grelhada no ponto perfeito
-          e queijo derretido. Simples, clássico e delicioso.
+          {{produto.descricao}}
         </p>
-        <span class="product__price">R$ 25,00</span>
+        <span class="product__price">{{produto.preco}}</span>
         <button class="button button--primary">Comprar 🍔</button>
       </div>
 

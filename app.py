@@ -10,10 +10,10 @@ def pag_index():
     destaques = destaque()
     return render_template("index.html", produtos= produtos, destaques = destaques)
 
-@app.route("/pagina2/<codigo>")
+@app.route("/produto/<codigo>")
 def pagina_pagina2(codigo):
     produto = recuperar_produto(codigo)
-    return render_template("pagina2.html", produto = produto)
+    return render_template("produto.html", produtos = produto)
 
 
 
