@@ -1,21 +1,28 @@
 from database.conexao import conectar
 
-def adicionar_usuario(nome:str, senha:str):
-    """
-    Adiciona o usuario e retorna se deu certo ou não
-    """
-    try:
+class Usuario:
+    def __init__(self, usuario:str, senha:str, nome:str=None):
+        self.usuario = usuario
+        self.senha = senha
+        self.nome = nome
 
+    def cadastrar(self):
         conexao, cursor = conectar()
-
-        cursor.execute("INSERT INTO usuario (nome_usuario, senha) VALUES (%s, %s)", [nome, senha])
-
+        cursor.execute("""
+                        INSERT INTO usuarios (usuario, senha, nome)
+                       VALUES (%s, %s, %s);
+                       """, [self.usuario,self.senha, self.nome])
         conexao.commit()
-
         conexao.close()
-
         return True
-    
-    except Exception as erro:
-        print (erro)    
-     
+
+    @staticmethod
+    def logar(usuario:str, senha:str) ->dict:
+        conexao, cursor = conectar()
+        cursor.execute("""
+                        SELECT * FROM usuarios WHERE usuario = %s AND senha  %s;
+                       """, 
+                       [usuario, senha ])
+        resultado = cursor.fetchone
+        conexao.close()
+        return resultado

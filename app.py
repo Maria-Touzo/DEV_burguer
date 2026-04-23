@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from model.requisitos import recuperar_requisitos, destaque, recuperar_produto
-from model.usuario import adicionar_usuario
+from model.usuario import Usuario
 
 app = Flask(__name__)
 
@@ -26,10 +26,12 @@ def pegar_dados():
     nome_usuario = request.form.get("usuario")
     senha = request.form.get("senha")
 
-    if adicionar_usuario(nome_usuario, senha):
-        return redirect ("/tela_cadastro")
+    novo_usuario = Usuario (nome_usuario, senha)
+    if novo_usuario.cadastrar():
+        return redirect ("/")
     else:
         return "ERRO"
+    
 
 
 
